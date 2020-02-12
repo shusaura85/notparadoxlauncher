@@ -8,17 +8,17 @@ If you have other games from Paradox Interactive installed, make a backup for th
 # What's it for
 
 The app was designed for Cities: Skylines (Steam) but it should work with all Paradox Interactive games that use their launcher (untested)  
-The current version only works on Windows (no access to a Mac PC so it won't come anytime soon).  
+The current version only works on Windows (at least Win 8) (no access to a Mac PC so it won't come anytime soon).  
 Steam Overlay is working!
 
 # Installation
 
- - download the latest release from the **Releases** page
- - Extract the files to a folder of your choosing (do not place in the same folder as cities.exe - will not work due to issue #3)
- - Start the **launcher.exe** app once to set it up
- - Start the game from Steam as usual
+- download the latest release from the **Releases** page
+- Extract the files to a folder of your choosing
+- Start the **launcher.exe** app once to set it up
+- Start the game from Steam as usual
 
 # Uninstall
 
- - delete the extracted files
- - delete the file **launcherpath** from "C:\Users\<USERNAME>\AppData\Local\Paradox Interactive\"
+- delete the extracted files
+- delete the file **launcherpath** from "C:\Users\<USERNAME>\AppData\Local\Paradox Interactive\"
