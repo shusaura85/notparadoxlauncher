@@ -1,0 +1,26 @@
+Changelog
+=========
+
+Version 1.0.0
+-------------
+- [new] Options button to set launch options
+- [new] Options window: Continue last save game (automatically load last save game on start). Sets the "--continuelastsave" cmdline argument
+- [new] Options window: Disable Steam Workshop. Sets the "--noWorkshop" cmdline argument
+- [new] Options window: Disable Mods. Sets the "--disableMods" cmdline argument
+- [new] Options window: Disable Game Log. Sets the "-nolog" cmdline argument
+- [new] Options window: Force game to run in fullscreen/window/borderless window mode
+- [new] Options window: Limit FPS
+- [new] Options window: Force Direct3D 9. Sets the "-forced3d9" cmdline argument
+- [new] Options window: Force OpenGL. Sets the "-forceopengl" cmdline argument
+- [new] Options window: Possibility to add any other cmdline argument you might need
+- [change] has a 5 second countdown before starting the game
+- [change] new darker background image (better contrast with the text)
+- [change] launcher automatically closes 5 seconds after starting the game
+- [fix] Launcher can now be placed in same folder as the game
+- [fix] Steam Overlay should be fully functional now
+
+
+Version 0.0.1 beta
+------------------
+- initial release
+- Steam Overlay partially working
