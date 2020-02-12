@@ -14,7 +14,7 @@ Steam Overlay is working!
 # Installation
 
  - download the latest release from the **Releases** page
- - Extract the files to a folder of your choosing
+ - Extract the files to a folder of your choosing (do not place in the same folder as cities.exe - will not work due to issue #3)
  - Start the **launcher.exe** app once to set it up
  - Start the game from Steam as usual
 
