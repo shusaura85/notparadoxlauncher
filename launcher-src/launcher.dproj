@@ -125,8 +125,9 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=;FileDescription=Not Paradox Launcher;FileVersion=1.0.0.0;InternalName=launcher.exe;LegalCopyright=;LegalTrademarks=;OriginalFilename=launcher.exe;ProductName=Not Paradox Launcher;ProductVersion=1.0.0.0;Comments=Start the game without Paradox launcher</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=;FileDescription=Not Paradox Launcher;FileVersion=1.1.0.0;InternalName=launcher.exe;LegalCopyright=;LegalTrademarks=;OriginalFilename=launcher.exe;ProductName=Not Paradox Launcher;ProductVersion=1.1.0.0;Comments=Start the game without Paradox launcher</VerInfo_Keys>
         <Icon_MainIcon>mainicon.ico</Icon_MainIcon>
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
