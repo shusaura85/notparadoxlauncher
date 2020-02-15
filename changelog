@@ -1,6 +1,13 @@
 Changelog
 =========
 
+Version 1.1.0
+======================
+- [new] Show button to easily switch between loading main menu and resuming last save game.	
+  This button changes the mode for the current session only (will not change the option permanently)
+- [change] moved the Cancel button a bit lower to make space for the new button
+
+
 Version 1.0.0
 -------------
 - [new] Options button to set launch options

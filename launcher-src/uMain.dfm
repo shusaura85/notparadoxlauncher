@@ -16173,7 +16173,7 @@ object NotLauncherWindow: TNotLauncherWindow
     Left = 8
     Top = 184
     Width = 784
-    Height = 120
+    Height = 104
     Alignment = taCenter
     Anchors = [akLeft, akTop, akRight]
     AutoSize = False
@@ -16207,27 +16207,6 @@ object NotLauncherWindow: TNotLauncherWindow
     CustomTextColors.Focused = 14120960
     URL = 'https://github.com/shusaura85/notparadoxlauncher'
   end
-  object btnCancelStart: TUButton
-    Left = 332
-    Top = 310
-    Height = 31
-    ThemeManager = UThemeManager1
-    CustomBorderColors.None = 15921906
-    CustomBorderColors.Hover = 15132390
-    CustomBorderColors.Press = 13421772
-    CustomBorderColors.Disabled = 15921906
-    CustomBorderColors.Focused = 15921906
-    CustomBackColors.None = 15921906
-    CustomBackColors.Hover = 15132390
-    CustomBackColors.Press = 13421772
-    CustomBackColors.Disabled = 15921906
-    CustomBackColors.Focused = 15921906
-    CustomTextColors.Disabled = clGray
-    Highlight = True
-    Caption = 'Cancel'
-    Visible = False
-    OnClick = btnCancelStartClick
-  end
   object btnPlay: TUButton
     Left = 332
     Top = 347
@@ -16249,6 +16228,27 @@ object NotLauncherWindow: TNotLauncherWindow
     Visible = False
     OnClick = btnPlayClick
   end
+  object btnCancelStart: TUButton
+    Left = 332
+    Top = 330
+    Height = 31
+    ThemeManager = UThemeManager1
+    CustomBorderColors.None = 15921906
+    CustomBorderColors.Hover = 15132390
+    CustomBorderColors.Press = 13421772
+    CustomBorderColors.Disabled = 15921906
+    CustomBorderColors.Focused = 15921906
+    CustomBackColors.None = 15921906
+    CustomBackColors.Hover = 15132390
+    CustomBackColors.Press = 13421772
+    CustomBackColors.Disabled = 15921906
+    CustomBackColors.Focused = 15921906
+    CustomTextColors.Disabled = clGray
+    Highlight = True
+    Caption = 'Cancel'
+    Visible = False
+    OnClick = btnCancelStartClick
+  end
   object btnOptions: TUButton
     Left = 8
     Top = 400
@@ -16267,6 +16267,27 @@ object NotLauncherWindow: TNotLauncherWindow
     CustomTextColors.Disabled = clGray
     Caption = 'Options'
     OnClick = btnOptionsClick
+  end
+  object btnSwitchResume: TUButton
+    Left = 304
+    Top = 294
+    Width = 193
+    ThemeManager = UThemeManager1
+    CustomBorderColors.None = 15921906
+    CustomBorderColors.Hover = 15132390
+    CustomBorderColors.Press = 13421772
+    CustomBorderColors.Disabled = 15921906
+    CustomBorderColors.Focused = 15921906
+    CustomBackColors.None = 15921906
+    CustomBackColors.Hover = 15132390
+    CustomBackColors.Press = 13421772
+    CustomBackColors.Disabled = 15921906
+    CustomBackColors.Focused = 15921906
+    CustomTextColors.Disabled = clGray
+    Highlight = True
+    Caption = 'Resume last game / Do not resume last game'
+    Visible = False
+    OnClick = btnSwitchResumeClick
   end
   object SetupTimer: TTimer
     Enabled = False

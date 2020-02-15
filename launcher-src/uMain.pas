@@ -25,6 +25,7 @@ type
     UHyperLink1: TUHyperLink;
     btnPlay: TUButton;
     btnOptions: TUButton;
+    btnSwitchResume: TUButton;
     procedure FormShow(Sender: TObject);
     procedure SetupTimerTimer(Sender: TObject);
     procedure ShutdownTimerTimer(Sender: TObject);
@@ -32,6 +33,7 @@ type
     procedure btnCancelStartClick(Sender: TObject);
     procedure btnPlayClick(Sender: TObject);
     procedure btnOptionsClick(Sender: TObject);
+    procedure btnSwitchResumeClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,6 +68,9 @@ implementation
 {$R *.dfm}
 
 uses uOptions;
+
+const LANG_RESUME_LAST_GAME = 'Continue last save game';
+      LANG_DO_NOT_RESUME_LAST_GAME = 'Do not continue last save game';
 
 procedure TNotLauncherWindow.SetupTimerTimer(Sender: TObject);
 begin
@@ -222,6 +227,7 @@ lblCountdown.Caption := ' ';
 lblCountdownShadow.Caption := lblCountdown.Caption;
 
 btnCancelStart.Visible := false;
+btnSwitchResume.Visible := false;
 btnPlay.Visible := true;
 end;
 
@@ -250,7 +256,26 @@ lblCountdown.Visible := true;
 lblCountdownShadow.Visible := true;
 
 btnCancelStart.Visible := true;
+btnSwitchResume.Visible := true;
+if option_loadlastsave then btnSwitchResume.Caption := LANG_DO_NOT_RESUME_LAST_GAME
+                       else btnSwitchResume.Caption := LANG_RESUME_LAST_GAME;
+
 btnPlay.Visible := false;
+end;
+
+procedure TNotLauncherWindow.btnSwitchResumeClick(Sender: TObject);
+begin
+option_loadlastsave := not option_loadlastsave;
+
+if option_loadlastsave then btnSwitchResume.Caption := LANG_DO_NOT_RESUME_LAST_GAME
+                       else btnSwitchResume.Caption := LANG_RESUME_LAST_GAME;
+
+btnSwitchResume.Repaint;
+
+lblCountdown.Caption := 'Starting game in '+IntTostr(StartGameTimer.Tag+1)+'...';
+if option_loadlastsave then lblCountdown.Caption := lblCountdown.Caption + #13#10 + 'Autoloading last save game!';
+lblCountdownShadow.Caption := lblCountdown.Caption;
+
 end;
 
 procedure TNotLauncherWindow.FormShow(Sender: TObject);
