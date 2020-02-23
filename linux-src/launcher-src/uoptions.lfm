@@ -1,0 +1,233 @@
+object NotLauncherOptions: TNotLauncherOptions
+  Left = 389
+  Height = 418
+  Top = 472
+  Width = 700
+  ActiveControl = btnSaveOptions
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Launch Options'
+  ClientHeight = 418
+  ClientWidth = 700
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '2.0.6.0'
+  object btnCancel: TButton
+    Left = 8
+    Height = 33
+    Top = 376
+    Width = 150
+    Anchors = [akLeft, akBottom]
+    Caption = 'Cancel'
+    OnClick = btnCancelClick
+    TabOrder = 0
+  end
+  object PageControl1: TPageControl
+    Left = 8
+    Height = 360
+    Top = 8
+    Width = 682
+    ActivePage = tab3
+    TabIndex = 2
+    TabOrder = 1
+    object tab1: TTabSheet
+      Caption = 'Game Play Options'
+      ClientHeight = 329
+      ClientWidth = 672
+      object option_loadlastsave: TCheckBox
+        Left = 16
+        Height = 23
+        Top = 8
+        Width = 321
+        Caption = 'Continue last save game (--continuelastsave)'
+        TabOrder = 0
+      end
+      object Label1: TLabel
+        Left = 48
+        Height = 34
+        Top = 32
+        Width = 563
+        Caption = 'This option when active will skip the main menu of the game and automatically load '#10'the last save game you played. Disable this option if you want to load the main menu.'
+        Font.Color = cl3DLight
+        ParentColor = False
+        ParentFont = False
+      end
+      object option_noworkshop: TCheckBox
+        Left = 19
+        Height = 23
+        Top = 80
+        Width = 303
+        Caption = 'Disable Steam Workshop (--noWorkshop)'
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        Left = 51
+        Height = 34
+        Top = 106
+        Width = 522
+        Caption = 'This option when active will disable Steam Workshop. '#10'This includes all assets and mods that are downloaded from Steam Workshop.'
+        Font.Color = cl3DLight
+        ParentColor = False
+        ParentFont = False
+      end
+      object option_disablemods: TCheckBox
+        Left = 19
+        Height = 23
+        Top = 152
+        Width = 225
+        Caption = 'Disable Mods (--disableMods)'
+        TabOrder = 2
+      end
+      object Label3: TLabel
+        Left = 48
+        Height = 51
+        Top = 178
+        Width = 589
+        Caption = 'This option when active will disable all mods loaded in the game. '#10'Either from Steam Workshop or from preinstalled mods (such as unlimited money mod) '#10'and manually installed mods.'#13
+        Font.Color = cl3DLight
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 51
+        Height = 51
+        Top = 264
+        Width = 583
+        Caption = 'This option when active will disable the game logs. If active it  can reduce the load times '#10'but at the same time you won''#39''t know what errors and why they occured'#10'(do not use if you are testing new mods or assets)'#13
+        Font.Color = cl3DLight
+        ParentColor = False
+        ParentFont = False
+      end
+      object option_nolog: TCheckBox
+        Left = 22
+        Height = 23
+        Top = 240
+        Width = 201
+        Caption = 'Disable Game Log (-nolog)'
+        TabOrder = 3
+      end
+    end
+    object tab2: TTabSheet
+      Caption = 'Graphics'
+      ClientHeight = 329
+      ClientWidth = 672
+      object Label5: TLabel
+        Left = 8
+        Height = 17
+        Top = 11
+        Width = 101
+        Caption = 'Window Mode:'
+        ParentColor = False
+      end
+      object option_windowmode: TComboBox
+        Left = 8
+        Height = 29
+        Top = 32
+        Width = 656
+        AutoDropDown = True
+        ItemHeight = 0
+        ItemIndex = 0
+        Items.Strings = (
+          'Use default game mode (no override)'
+          'Force window mode (-windowed)'
+          'Force fullscreen (-fullscreen)'
+          'Force borderless window (-popupwindow)'
+        )
+        Style = csDropDownList
+        TabOrder = 0
+        Text = 'Use default game mode (no override)'
+      end
+      object option_limitFPS_active: TCheckBox
+        Left = 8
+        Height = 23
+        Top = 96
+        Width = 159
+        Caption = 'Limit FPS (-limitfps)'
+        OnClick = option_limitFPS_activeClick
+        TabOrder = 1
+      end
+      object option_limitFPS: TTrackBar
+        Left = 176
+        Height = 49
+        Top = 84
+        Width = 424
+        Max = 240
+        Min = 20
+        OnChange = option_limitFPSChange
+        Position = 240
+        TickStyle = tsNone
+        TabOrder = 2
+        Visible = False
+      end
+      object lblFPS: TLabel
+        Left = 606
+        Height = 17
+        Top = 99
+        Width = 52
+        Alignment = taRightJustify
+        Anchors = [akTop, akRight]
+        Caption = '240 FPS'
+        ParentColor = False
+        Visible = False
+      end
+      object Label7: TLabel
+        Left = 32
+        Height = 34
+        Top = 136
+        Width = 607
+        Caption = 'This option is useful if your graphics card is overheating, especially if you are using a laptop '#10'in summer months. It might also be useful if your monitor can''t handle higher frame rates.'
+        Font.Color = cl3DLight
+        ParentColor = False
+        ParentFont = False
+      end
+      object option_forceopengl: TCheckBox
+        Left = 8
+        Height = 23
+        Top = 200
+        Width = 224
+        Caption = 'Force OpenGL (-force-opengl)'
+        TabOrder = 3
+      end
+      object Label8: TLabel
+        Left = 32
+        Height = 51
+        Top = 240
+        Width = 598
+        Caption = 'This option will force the game to run using the OpenGL backend. Note that this can cause '#10'problems with the UI of some mods and possibly also cause issues with some of the more '#10'elaborate workshop assets.'
+        Font.Color = cl3DLight
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+    object tab3: TTabSheet
+      Caption = 'Advanced'
+      ClientHeight = 329
+      ClientWidth = 672
+      object option_advanced: TEdit
+        Left = 16
+        Height = 34
+        Top = 72
+        Width = 640
+        TabOrder = 0
+      end
+      object Label6: TLabel
+        Left = 19
+        Height = 34
+        Top = 17
+        Width = 617
+        Caption = 'Add here any other command line arguments that you want to use that are not available with '#10'the options in this launcher. '
+        ParentColor = False
+      end
+    end
+  end
+  object btnSaveOptions: TButton
+    Left = 539
+    Height = 33
+    Top = 376
+    Width = 150
+    Anchors = [akRight, akBottom]
+    Caption = 'Save options'
+    OnClick = btnSaveOptionsClick
+    TabOrder = 2
+  end
+end
