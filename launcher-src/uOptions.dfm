@@ -24,7 +24,6 @@ object NotLauncherOptions: TNotLauncherOptions
     Width = 600
     Height = 400
     HorzScrollBar.Tracking = True
-    VertScrollBar.Position = 657
     VertScrollBar.Smooth = True
     VertScrollBar.Tracking = True
     Align = alClient
@@ -41,10 +40,9 @@ object NotLauncherOptions: TNotLauncherOptions
     BackColor.Color = clBlack
     BackColor.LightColor = 15132390
     BackColor.DarkColor = 2039583
-    ExplicitHeight = 607
     object option_loadlastsave: TUCheckBox
       Left = 16
-      Top = -601
+      Top = 56
       Width = 561
       ThemeManager = UThemeManager1
       IconFont.Charset = DEFAULT_CHARSET
@@ -56,14 +54,14 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText1: TUText
       Left = 48
-      Top = -565
+      Top = 92
       Width = 532
       Height = 33
       AutoSize = False
       Caption = 
         'This option when active will skip the main menu of the game and ' +
-        'automatatically load the last save game you played. Disable this' +
-        ' option if you want to load the main menu.'
+        'automatically load the last save game you played. Disable this o' +
+        'ption if you want to load the main menu.'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 6710886
       Font.Height = -12
@@ -76,7 +74,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_noworkshop: TUCheckBox
       Left = 16
-      Top = -513
+      Top = 144
       Width = 561
       Hint = '--noWorkshop'
       ThemeManager = UThemeManager1
@@ -89,7 +87,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_disablemods: TUCheckBox
       Left = 16
-      Top = -425
+      Top = 232
       Width = 561
       ThemeManager = UThemeManager1
       IconFont.Charset = DEFAULT_CHARSET
@@ -101,7 +99,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText2: TUText
       Left = 48
-      Top = -477
+      Top = 180
       Width = 529
       Height = 33
       AutoSize = False
@@ -120,7 +118,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText3: TUText
       Left = 48
-      Top = -389
+      Top = 268
       Width = 532
       Height = 33
       AutoSize = False
@@ -140,7 +138,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object lblgameoptions: TUText
       Left = 16
-      Top = -647
+      Top = 10
       Width = 167
       Height = 28
       Caption = 'Game Play Options'
@@ -155,7 +153,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText5: TUText
       Left = 16
-      Top = -134
+      Top = 523
       Width = 151
       Height = 28
       Caption = 'Graphics Options'
@@ -170,7 +168,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_limitFPS_active: TUCheckBox
       Left = 16
-      Top = -97
+      Top = 560
       Width = 130
       ThemeManager = UThemeManager1
       IconFont.Charset = DEFAULT_CHARSET
@@ -183,7 +181,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText6: TUText
       Left = 48
-      Top = -61
+      Top = 596
       Width = 532
       Height = 53
       AutoSize = False
@@ -203,7 +201,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText7: TUText
       Left = 16
-      Top = -254
+      Top = 403
       Width = 130
       Height = 28
       Caption = 'Window Mode'
@@ -218,7 +216,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_windowmode_default: TURadioButton
       Left = 16
-      Top = -220
+      Top = 437
       Width = 257
       ThemeManager = UThemeManager1
       IconFont.Charset = DEFAULT_CHARSET
@@ -233,7 +231,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_windowmode_window: TURadioButton
       Left = 288
-      Top = -220
+      Top = 437
       Width = 273
       Hint = '-windowed'
       ThemeManager = UThemeManager1
@@ -248,7 +246,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_windowmode_borderless: TURadioButton
       Left = 288
-      Top = -184
+      Top = 473
       Width = 273
       Hint = '-popupwindow'
       ThemeManager = UThemeManager1
@@ -263,7 +261,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText8: TUText
       Left = 16
-      Top = 181
+      Top = 838
       Width = 87
       Height = 28
       Caption = 'Advanced'
@@ -278,7 +276,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText9: TUText
       Left = 16
-      Top = 278
+      Top = 935
       Width = 561
       Height = 45
       AutoSize = False
@@ -299,7 +297,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UHyperLink1: TUHyperLink
       Left = 16
-      Top = 333
+      Top = 990
       Width = 151
       Height = 13
       Caption = 'Launch Options - Cities Skylines'
@@ -318,7 +316,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_windowmode_fullscreen: TURadioButton
       Left = 16
-      Top = -184
+      Top = 473
       Width = 257
       Hint = '-fullscreen'
       ThemeManager = UThemeManager1
@@ -333,7 +331,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_nolog: TUCheckBox
       Left = 16
-      Top = -345
+      Top = 312
       Width = 561
       Hint = '-nolog'
       ThemeManager = UThemeManager1
@@ -346,7 +344,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText10: TUText
       Left = 48
-      Top = -309
+      Top = 348
       Width = 529
       Height = 49
       AutoSize = False
@@ -367,7 +365,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_limitFPS: TUSlider
       Left = 160
-      Top = -97
+      Top = 560
       Width = 297
       Height = 30
       ThemeManager = UThemeManager1
@@ -379,7 +377,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object lblFPS: TUText
       Left = 480
-      Top = -89
+      Top = 568
       Width = 45
       Height = 17
       Caption = '240 FPS'
@@ -394,7 +392,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_forced3d9: TUCheckBox
       Left = 16
-      Top = -25
+      Top = 632
       Width = 561
       Hint = '-force-d3d9'
       ThemeManager = UThemeManager1
@@ -407,7 +405,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText11: TUText
       Left = 48
-      Top = 11
+      Top = 668
       Width = 529
       Height = 49
       AutoSize = False
@@ -429,7 +427,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_forceopengl: TUCheckBox
       Left = 16
-      Top = 63
+      Top = 720
       Width = 561
       Hint = '-force-opengl'
       ThemeManager = UThemeManager1
@@ -442,7 +440,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText12: TUText
       Left = 48
-      Top = 99
+      Top = 756
       Width = 529
       Height = 49
       AutoSize = False
@@ -464,7 +462,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object UText13: TUText
       Left = 48
-      Top = 352
+      Top = 1009
       Width = 529
       Height = 48
       AutoSize = False
@@ -480,7 +478,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
     object option_advanced: TUEdit
       Left = 16
-      Top = 234
+      Top = 891
       Width = 561
       Caption = 'option_advanced'
       TabOrder = 1
@@ -513,7 +511,6 @@ object NotLauncherOptions: TNotLauncherOptions
     BackColor.Color = clBlack
     BackColor.LightColor = 15132390
     BackColor.DarkColor = 2039583
-    ExplicitTop = 607
     DesignSize = (
       600
       50)
