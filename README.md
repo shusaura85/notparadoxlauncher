@@ -3,7 +3,7 @@
 This app was designed to replace the Paradox Launcher recently added in Cities: Skylines.
 It might or might not work with other games from Paradox.
 
-If you have other games from Paradox Interactive installed, make a backup for the file "**launcherpath**", located in "C:\Users\<USERNAME>\AppData\Local\Paradox Interactive\" before starting this launcher.
+If you have other games from Paradox Interactive installed, make a backup for the file "**launcherpath**", located in "C:\Users\USERNAME\AppData\Local\Paradox Interactive\" before starting this launcher.
 
 ## What's it for
 
@@ -36,4 +36,4 @@ Steam Overlay is working!
 ## Uninstall
 
 - delete the extracted files
-- delete the file **launcherpath** from "C:\Users\<USERNAME>\AppData\Local\Paradox Interactive\"
+- delete the file **launcherpath** from "C:\Users\USERNAME\AppData\Local\Paradox Interactive\"
