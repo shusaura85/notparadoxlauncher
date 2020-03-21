@@ -1,7 +1,7 @@
 object NotLauncherWindow: TNotLauncherWindow
-  Left = 358
+  Left = 484
   Height = 450
-  Top = 176
+  Top = 175
   Width = 800
   BorderIcons = [biSystemMenu, biMaximize]
   BorderStyle = bsSingle
@@ -19844,6 +19844,19 @@ object NotLauncherWindow: TNotLauncherWindow
     OnClick = btnOptionsClick
     ParentFont = False
     TabOrder = 3
+  end
+  object btnSwitchWorkshop: TButton
+    Left = 144
+    Height = 33
+    Top = 404
+    Width = 184
+    Caption = 'Enable / Disable Steam Workshop'
+    Color = 5263440
+    Font.Color = clWhite
+    OnClick = btnSwitchWorkshopClick
+    ParentFont = False
+    TabOrder = 4
+    Visible = False
   end
   object ShutdownTimer: TTimer
     Enabled = False

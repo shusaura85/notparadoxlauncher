@@ -26,6 +26,7 @@ type
     btnPlay: TUButton;
     btnOptions: TUButton;
     btnSwitchResume: TUButton;
+    btnSwitchWorkshop: TUButton;
     procedure FormShow(Sender: TObject);
     procedure SetupTimerTimer(Sender: TObject);
     procedure ShutdownTimerTimer(Sender: TObject);
@@ -34,6 +35,7 @@ type
     procedure btnPlayClick(Sender: TObject);
     procedure btnOptionsClick(Sender: TObject);
     procedure btnSwitchResumeClick(Sender: TObject);
+    procedure btnSwitchWorkshopClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -71,6 +73,9 @@ uses uOptions;
 
 const LANG_RESUME_LAST_GAME = 'Continue last save game';
       LANG_DO_NOT_RESUME_LAST_GAME = 'Do not continue last save game';
+
+      LANG_DISABLE_STEAM_WORKSHOP = 'Disable Steam Workshop';
+      LANG_ENABLE_STEAM_WORKSHOP = 'Enable Steam Workshop';
 
 procedure TNotLauncherWindow.SetupTimerTimer(Sender: TObject);
 begin
@@ -260,6 +265,10 @@ btnSwitchResume.Visible := true;
 if option_loadlastsave then btnSwitchResume.Caption := LANG_DO_NOT_RESUME_LAST_GAME
                        else btnSwitchResume.Caption := LANG_RESUME_LAST_GAME;
 
+btnSwitchWorkshop.Visible := true;
+if option_noworkshop then btnSwitchWorkshop.Caption := LANG_ENABLE_STEAM_WORKSHOP
+                     else btnSwitchWorkshop.Caption := LANG_DISABLE_STEAM_WORKSHOP;
+
 btnPlay.Visible := false;
 end;
 
@@ -276,6 +285,16 @@ lblCountdown.Caption := 'Starting game in '+IntTostr(StartGameTimer.Tag+1)+'...'
 if option_loadlastsave then lblCountdown.Caption := lblCountdown.Caption + #13#10 + 'Autoloading last save game!';
 lblCountdownShadow.Caption := lblCountdown.Caption;
 
+end;
+
+procedure TNotLauncherWindow.btnSwitchWorkshopClick(Sender: TObject);
+begin
+option_noworkshop := not option_noworkshop;
+
+if option_noworkshop then btnSwitchWorkshop.Caption := LANG_ENABLE_STEAM_WORKSHOP
+                     else btnSwitchWorkshop.Caption := LANG_DISABLE_STEAM_WORKSHOP;
+
+btnSwitchWorkshop.Repaint;
 end;
 
 procedure TNotLauncherWindow.FormShow(Sender: TObject);

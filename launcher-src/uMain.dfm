@@ -16289,6 +16289,33 @@ object NotLauncherWindow: TNotLauncherWindow
     Visible = False
     OnClick = btnSwitchResumeClick
   end
+  object btnSwitchWorkshop: TUButton
+    Left = 149
+    Top = 400
+    Width = 148
+    Height = 42
+    Hint = 
+      'Disable (or Enable) Steam Workshop for this session only (won'#39't ' +
+      'change default option)'
+    ThemeManager = UThemeManager1
+    CustomBorderColors.None = 15921906
+    CustomBorderColors.Hover = 15132390
+    CustomBorderColors.Press = 13421772
+    CustomBorderColors.Disabled = 15921906
+    CustomBorderColors.Focused = 15921906
+    CustomBackColors.None = 15921906
+    CustomBackColors.Hover = 15132390
+    CustomBackColors.Press = 13421772
+    CustomBackColors.Disabled = 15921906
+    CustomBackColors.Focused = 15921906
+    CustomTextColors.Disabled = clGray
+    Highlight = True
+    Caption = 'Disable/Enable Steam Workshop'
+    ParentShowHint = False
+    ShowHint = True
+    Visible = False
+    OnClick = btnSwitchWorkshopClick
+  end
   object SetupTimer: TTimer
     Enabled = False
     Interval = 500
