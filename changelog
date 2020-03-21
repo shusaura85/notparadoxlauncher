@@ -1,12 +1,18 @@
 Changelog
 =========
 
+
+Version 1.2.0
+======================
+- [new] Dedicated button to enable/disable Steam Workshop for the current session (similar with the resume last game button).
+- [windows][fix] %APPDATA% should have been %LOCALAPPDATA% in removal instructions. Replaced with full path.
+
+
 Version 1.1.1
 ==============
 - [new] Now launcher works on linux as well
 - [linux] Same options as windows version are available (except Force Direct3D 9 as it's a windows only feature)
 - [windows] fix small typo in in options window
-
 
 
 Version 1.1.0
