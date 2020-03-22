@@ -8,7 +8,7 @@ If you have other games from Paradox Interactive installed, make a backup for th
 ## What's it for
 
 The app was designed for Cities: Skylines (Steam) but it should work with all Paradox Interactive games that use their launcher (untested)  
-In here you will find the Windows version (compiled with Delphi 10.3). The Linux version is inside the linux folder. There is currently no Mac version available.  
+In here you will find the Windows version (compiled with Delphi 10.3). The Linux version source code is inside the linux-src folder. The Mac version source code is inside the mac-src folder.  
 Steam Overlay is working!
 
 ## Features
