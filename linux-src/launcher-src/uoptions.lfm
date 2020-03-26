@@ -1,5 +1,5 @@
 object NotLauncherOptions: TNotLauncherOptions
-  Left = 399
+  Left = 484
   Height = 418
   Top = 466
   Width = 700
@@ -99,7 +99,7 @@ object NotLauncherOptions: TNotLauncherOptions
         Height = 51
         Top = 264
         Width = 583
-        Caption = 'This option when active will disable the game logs. If active it  can reduce the load times '#10'but at the same time you won''#39''t know what errors and why they occured'#10'(do not use if you are testing new mods or assets)'#13
+        Caption = 'This option when active will disable the game logs. If active it  can reduce the load times '#10'but at the same time you won''t know what errors and why they occured'#10'(do not use if you are testing new mods or assets)'#13
         Font.Color = clGrayText
         ParentColor = False
         ParentFont = False
@@ -123,14 +123,14 @@ object NotLauncherOptions: TNotLauncherOptions
         Left = 8
         Height = 17
         Top = 11
-        Width = 93
+        Width = 101
         Caption = 'Window Mode:'
         ParentColor = False
         ParentFont = False
       end
       object option_windowmode: TComboBox
         Left = 8
-        Height = 31
+        Height = 29
         Top = 32
         Width = 656
         AutoDropDown = True
@@ -149,9 +149,9 @@ object NotLauncherOptions: TNotLauncherOptions
       end
       object option_limitFPS_active: TCheckBox
         Left = 8
-        Height = 21
+        Height = 23
         Top = 96
-        Width = 141
+        Width = 159
         Caption = 'Limit FPS (-limitfps)'
         OnClick = option_limitFPS_activeClick
         ParentFont = False
@@ -172,10 +172,10 @@ object NotLauncherOptions: TNotLauncherOptions
         Visible = False
       end
       object lblFPS: TLabel
-        Left = 616
+        Left = 613
         Height = 17
         Top = 99
-        Width = 49
+        Width = 52
         Alignment = taRightJustify
         Anchors = [akTop, akRight]
         Caption = '240 FPS'
@@ -187,7 +187,7 @@ object NotLauncherOptions: TNotLauncherOptions
         Left = 32
         Height = 34
         Top = 136
-        Width = 565
+        Width = 607
         Caption = 'This option is useful if your graphics card is overheating, especially if you are using a laptop '#10'in summer months. It might also be useful if your monitor can''t handle higher frame rates.'
         Font.Color = clGrayText
         ParentColor = False
@@ -195,9 +195,9 @@ object NotLauncherOptions: TNotLauncherOptions
       end
       object option_forceopengl: TCheckBox
         Left = 8
-        Height = 21
+        Height = 23
         Top = 200
-        Width = 206
+        Width = 224
         Caption = 'Force OpenGL (-force-opengl)'
         ParentFont = False
         TabOrder = 3
@@ -206,7 +206,7 @@ object NotLauncherOptions: TNotLauncherOptions
         Left = 32
         Height = 51
         Top = 240
-        Width = 559
+        Width = 598
         Caption = 'This option will force the game to run using the OpenGL backend. Note that this can cause '#10'problems with the UI of some mods and possibly also cause issues with some of the more '#10'elaborate workshop assets.'
         Font.Color = clGrayText
         ParentColor = False
@@ -220,7 +220,7 @@ object NotLauncherOptions: TNotLauncherOptions
       ParentFont = False
       object option_advanced: TEdit
         Left = 16
-        Height = 30
+        Height = 34
         Top = 72
         Width = 640
         ParentFont = False
@@ -230,7 +230,7 @@ object NotLauncherOptions: TNotLauncherOptions
         Left = 19
         Height = 34
         Top = 17
-        Width = 585
+        Width = 617
         Caption = 'Add here any other command line arguments that you want to use that are not available with '#10'the options in this launcher. '
         ParentColor = False
         ParentFont = False
@@ -238,7 +238,7 @@ object NotLauncherOptions: TNotLauncherOptions
     end
   end
   object btnSaveOptions: TButton
-    Left = 539
+    Left = 540
     Height = 33
     Top = 376
     Width = 150
