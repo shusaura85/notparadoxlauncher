@@ -41,6 +41,7 @@ type
 
     gamedir : string;
     gameexe : string;
+    gamever : string;
 
     option_loadlastsave: boolean;
     option_noworkshop  : boolean;
@@ -182,6 +183,7 @@ LoadOptions;
 gameexe := 'game-main-executable.exe';
 // have a safe default dir
 gamedir := '/home';
+gamever := '0.0.not-found';
 
 if (ParamStr(1)= '--gameDir') then gamedir := IncludeTrailingPathDelimiter(ParamStr(2));
 
@@ -204,13 +206,15 @@ if FileExists(gamedir+'launcher-settings.json') then
 
 
    // set game name
-
   lblGameTitle.Caption := obj.Get('displayName','');
   lblGameTitleShadow.Caption := lblGameTitle.Caption;
+  // game version
+  gamever := obj.Get('version', '');
    // set launcher title
   Caption := 'Not Paradox Launcher for: '+lblGameTitle.Caption;
+  if gamever <> '' then Caption := Caption + ' ('+gamever+')';
    // game exe file
-   gameexe := obj.Get('exePath','');
+  gameexe := obj.Get('exePath','');
 
 
    btnPlayClick(Sender);
