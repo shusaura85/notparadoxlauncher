@@ -106,7 +106,8 @@
     <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <VerInfo_Locale>1033</VerInfo_Locale>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=NOT Paradox;FileDescription=Called by the game to start the launcher app;FileVersion=1.0.0.0;InternalName=bootstrapper-v2.exe;LegalCopyright=;LegalTrademarks=;OriginalFilename=bootstrapper-v2.exe;ProductName=Not Paradox Launcher;ProductVersion=1.0.0.0;Comments=Bootstrapper for Not Paradox Launcher</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=NOT Paradox;FileDescription=Called by the game to start the launcher app;FileVersion=1.1.0.0;InternalName=bootstrapper-v2.exe;LegalCopyright=;LegalTrademarks=;OriginalFilename=bootstrapper-v2.exe;ProductName=Not Paradox Launcher;ProductVersion=1.1.0.0;Comments=Bootstrapper for Not Paradox Launcher</VerInfo_Keys>
+        <VerInfo_MinorVer>1</VerInfo_MinorVer>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
