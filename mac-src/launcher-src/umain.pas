@@ -42,6 +42,7 @@ type
 
     gamedir : string;
     gameexe : string;
+    gamever : string;
 
     option_loadlastsave: boolean;
     option_noworkshop  : boolean;
@@ -214,17 +215,21 @@ var    SL : TStringList;
     launcherdir:string;
     jData : TJSONData;
       obj : TJSONObject;
+
 begin
 // load game options
 LoadOptions;
-// if launcher-settings.json doesn't exist, we use cities.exe
+// if launcher-settings.json doesn't exist
 gameexe := 'game-main-executable.exe';
 // have a safe default dir
 gamedir := '/home';
+gamever := '0.0.not-found';
 
 if (ParamStr(1)= '--gameDir') then gamedir := IncludeTrailingPathDelimiter(ParamStr(2));
 
 // debug
+Caption := gamedir;
+//gamedir := '/home/shu/.local/share/Steam/steamapps/common/Cities_Skylines/';
 
 // try to open launcher settings json file
 if FileExists(gamedir+'launcher-settings.json') then
@@ -241,13 +246,14 @@ if FileExists(gamedir+'launcher-settings.json') then
 
 
    // set game name
-
   lblGameTitle.Caption := obj.Get('displayName','');
   lblGameTitleShadow.Caption := lblGameTitle.Caption;
+  gamever := obj.Get('version', '');
    // set launcher title
   Caption := 'Not Paradox Launcher for: '+lblGameTitle.Caption;
+  if gamever <> '' then Caption := Caption + ' ('+gamever+')';
    // game exe file
-   gameexe := obj.Get('exePath','');
+  gameexe := obj.Get('exePath','');
 
 
    btnPlayClick(Sender);
@@ -264,6 +270,7 @@ else
    // make sure the path exists for launcherpath
    //launcherdir := GetUserDir+'.local/share/Paradox Interactive/';
    launcherdir := GetPreferencesFolder + 'Paradox Interactive/';
+   writeln(launcherdir);
    if not DirectoryExists(launcherdir) then ForceDirectories(launcherdir);
    // save the file
    SL.SaveToFile(launcherdir + 'launcherpath');
