@@ -1,6 +1,15 @@
 Changelog
 =========
 
+Version 1.3.0
+======================
+- [all][change] improved bootstrapper parameters detection
+- [mac][bugfix] Sunset Harbor update changed how the launcher behaves on MacOS (changed location and start parameters)
+- [mac][new] game version is now shown in launcher title after the game name
+- [mac][change] color for options info text changed so it's more readable
+- [linux][new] game version is now shown in launcher title after the game name
+
+
 Version 1.2.2
 ======================
 - [linux][bugfix] launcher won't close if XDG_CURRENT_DESKTOP = KDE
