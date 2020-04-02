@@ -140,6 +140,8 @@ procedure TNotLauncherWindow.StartGame;
 var
    FileName : String ;
    RunProgram : TProcess;
+   sl : TstringList;
+   si : integer;
 begin
 // prepare vars for createprocess
 FileName := gamedir + gameexe; //'Cities.x64';
@@ -162,7 +164,18 @@ if option_limitfps > 0     then
 if option_forced3d9        then RunProgram.Parameters.Add('-force-d3d9');
 if option_forceopengl      then RunProgram.Parameters.Add('-force-opengl');
 
-if option_advanced <> ''   then RunProgram.Parameters.Text := RunProgram.Parameters.Text + ' '+option_advanced;
+//if option_advanced <> ''   then RunProgram.Parameters.Text := RunProgram.Parameters.Text + ' '+option_advanced;
+if option_advanced <> '' then
+   begin
+   sl := TStringList.Create;
+   try
+     sl.Delimiter:= ' ';
+     sl.DelimitedText:= option_advanced;
+     for si:=0 to sl.Count-1 do RunProgram.Parameters.Add( sl[si] );
+   finally
+     sl.Free;
+   end;
+   end;
 
 //RunProgram.Options:= RunProgram.Options + [poUsePipes];
 RunProgram.Execute;
