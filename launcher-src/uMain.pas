@@ -243,7 +243,15 @@ if StartGameTimer.Enabled then btnCancelStartClick(Sender);
 // show options window
 NotLauncherOptions.hasSaved := false;
 NotLauncherOptions.ShowModal;
-if NotLauncherOptions.hasSaved then LoadOptions;
+if NotLauncherOptions.hasSaved then
+   begin
+   LoadOptions;
+   // refresh enable/disable steam workshop button
+   if option_noworkshop then btnSwitchWorkshop.Caption := LANG_ENABLE_STEAM_WORKSHOP
+                        else btnSwitchWorkshop.Caption := LANG_DISABLE_STEAM_WORKSHOP;
+
+   if btnSwitchWorkshop.Visible then btnSwitchWorkshop.Repaint;
+   end;
 
 end;
 
