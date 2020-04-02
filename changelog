@@ -1,6 +1,13 @@
 Changelog
 =========
 
+Version 1.3.1
+======================
+- [mac/linux][bugfix] Advanced parameters now working
+- [mac] Wrapped bootstrapper-v2 and launcher inside application bundle to fix focus issues (could not type in advanced option textbox, only copy/paste)
+- [all][fix] Enable/Disable Workshop button wouldn't refresh after options changing
+
+
 Version 1.3.0
 ======================
 - [all][change] improved bootstrapper parameters detection
