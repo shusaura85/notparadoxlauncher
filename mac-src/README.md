@@ -28,12 +28,11 @@ Steam Overlay is working!
 ## Installation
 
 - download the latest release from the **Releases** page
-- Extract the files to a folder of your choosing (ex: ~/notparadoxlauncher)
-- Ensure the binaries "bootstrapper-v2" and "launcher" are both marked as executable in properties - permissions
-- Start the **launcher** app once to set it up
+- Extract the application bundle and move it to a location of your choosing
+- Start **Not Paradox Launcher** app once to set it up
 - Start the game from Steam as usual
 
 ## Uninstall
 
-- delete the extracted files
+- delete the app **Not Paradox Launcher**
 - delete the file **launcherpath** from "~/Library/Preferences/Paradox Interactive/"

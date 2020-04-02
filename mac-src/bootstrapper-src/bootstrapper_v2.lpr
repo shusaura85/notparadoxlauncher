@@ -16,24 +16,17 @@ var
 
    //f:Text;
    i:integer;
+   path:string;
 
 {$R *.res}
 
 begin
 gamedir := '';
-// Sunset Harbor update added a new parameter to the launcher --pdxlGameDir but it still has the original --gameDir parameter so we aren't using it at this moment
-{
 for i:=1 to ParamCount-1 do
-    if (ParamStr(i) = '--pdxlGameDir') then gamedir := ParamStr(i+1);
-}
-// pre Sunset Harbor update
-if gamedir = '' then
-   begin
-   for i:=1 to ParamCount-1 do
-       if (ParamStr(i)= '--gameDir') then gamedir := ParamStr(i+1);
-   end;
+    if (ParamStr(i)= '--gameDir') then gamedir := ParamStr(i+1);
 
-launcherpath := IncludeTrailingPathDelimiter(ExtractFilePath(ParamStr(0)))+'launcher';
+path := IncludeTrailingPathDelimiter(ExtractFilePath(ParamStr(0)));
+launcherpath := path+'launcher';
 
 {
 Assign(f, IncludeTrailingPathDelimiter(ExtractFilePath(ParamStr(0)))+'debug.txt');
