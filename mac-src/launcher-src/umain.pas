@@ -179,6 +179,8 @@ procedure TNotLauncherWindow.StartGame;
 var
    FileName : String ;
    RunProgram : TProcess;
+   sl : TstringList;
+   si:integer;
 begin
 // prepare vars for createprocess
 FileName := gamedir + gameexe; //'Cities.x64';
@@ -201,7 +203,18 @@ if option_limitfps > 0     then
 if option_forced3d9        then RunProgram.Parameters.Add('-force-d3d9');
 if option_forceopengl      then RunProgram.Parameters.Add('-force-opengl');
 
-if option_advanced <> ''   then RunProgram.Parameters.Text := RunProgram.Parameters.Text + ' '+option_advanced;
+//if option_advanced <> ''   then RunProgram.Parameters.Text := RunProgram.Parameters.Text + ' '+option_advanced;
+if option_advanced <> '' then
+   begin
+   sl := TStringList.Create;
+   try
+     sl.Delimiter:= ' ';
+     sl.DelimitedText:= option_advanced;
+     for si:=0 to sl.Count-1 do RunProgram.Parameters.Add( sl[si] );
+   finally
+     sl.Free;
+   end;
+   end;
 
 //RunProgram.Options:= RunProgram.Options + [poUsePipes];
 RunProgram.Execute;
@@ -228,7 +241,7 @@ gamever := '0.0.not-found';
 if (ParamStr(1)= '--gameDir') then gamedir := IncludeTrailingPathDelimiter(ParamStr(2));
 
 // debug
-Caption := gamedir;
+//Caption := gamedir;
 //gamedir := '/home/shu/.local/share/Steam/steamapps/common/Cities_Skylines/';
 
 // try to open launcher settings json file
@@ -270,7 +283,7 @@ else
    // make sure the path exists for launcherpath
    //launcherdir := GetUserDir+'.local/share/Paradox Interactive/';
    launcherdir := GetPreferencesFolder + 'Paradox Interactive/';
-   writeln(launcherdir);
+   //writeln(launcherdir);
    if not DirectoryExists(launcherdir) then ForceDirectories(launcherdir);
    // save the file
    SL.SaveToFile(launcherdir + 'launcherpath');
@@ -352,7 +365,14 @@ if StartGameTimer.Enabled then btnCancelStartClick(Sender);
 // show options window
 NotLauncherOptions.hasSaved := false;
 NotLauncherOptions.ShowModal;
-if NotLauncherOptions.hasSaved then LoadOptions;
+if NotLauncherOptions.hasSaved then
+   begin
+   LoadOptions;
+   // refresh enable/disable steam workshop button
+   if option_noworkshop then btnSwitchWorkshop.Caption := LANG_ENABLE_STEAM_WORKSHOP
+                        else btnSwitchWorkshop.Caption := LANG_DISABLE_STEAM_WORKSHOP;
+
+   end;
 end;
 
 procedure TNotLauncherWindow.SetupTimerTimer(Sender: TObject);
