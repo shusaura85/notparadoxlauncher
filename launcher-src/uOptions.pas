@@ -92,7 +92,7 @@ if FileExists(path+'notlauncher-options.json') then
 
    tmp := obj.S['windowmode'];
    if tmp = 'window' then
-      option_windowmode_fullscreen.IsChecked := true
+      option_windowmode_window.IsChecked := true
    else
    if tmp = 'fullscreen' then
       option_windowmode_fullscreen.IsChecked := true
