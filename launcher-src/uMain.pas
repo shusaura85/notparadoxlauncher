@@ -71,8 +71,8 @@ implementation
 
 uses uOptions;
 
-const LANG_RESUME_LAST_GAME = 'Continue last save game';
-      LANG_DO_NOT_RESUME_LAST_GAME = 'Do not continue last save game';
+const LANG_RESUME_LAST_GAME = 'Will not continue last save game';
+      LANG_DO_NOT_RESUME_LAST_GAME = 'Will continue last save game';
 
       LANG_DISABLE_STEAM_WORKSHOP = 'Disable Steam Workshop';
       LANG_ENABLE_STEAM_WORKSHOP = 'Enable Steam Workshop';
